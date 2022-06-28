@@ -24,7 +24,7 @@ jobs:
           pip install pollination-apps
       - name: deploy app to pollination
         run: |
-          pollination-apps deploy . --owner justinshultz --name "Simple-Unit-Converter" --tag ${{ env.RELEASE_VERSION }} --public
+          pollination-apps deploy app --owner justinshultz --name "Simple-Unit-Converter" --tag ${{ env.RELEASE_VERSION }} --public
         env:
           POLLINATION_TOKEN: ${{ secrets.POLLINATION_TOKEN }}
 
